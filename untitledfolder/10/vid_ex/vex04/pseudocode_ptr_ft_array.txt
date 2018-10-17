@@ -1,0 +1,31 @@
+put_stdout;
+put_file;
+put_network;
+
+function_put(where, what)
+{
+    if (where == stdout)
+        put_stdout(what);
+    else if (where == file)
+        put_file(what);
+    else if (where == network)
+        put_network(what);
+    else
+        error();
+}
+
+
+beter versie met pointer to functions in array
+
+function_tab = [ ( stdout, &put_stdout );
+                 ( file, &put_file );
+                 ( network, &put_network ); ]
+
+function_put(where, what)
+{
+    for( where_r, put_function) in function_tab
+        {
+            if (where == where_r )
+                put_function(what);
+        }
+}

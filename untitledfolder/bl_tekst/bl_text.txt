@@ -1,0 +1,16 @@
+Compiling
+
+gcc -Wall -Wextra -Werror 
+-extra streng controle bij compilen
+
+gcc source.c 
+- geeft een excecutable a.out 
+
+gcc -o
+- hiermee sprecificeer je de excecutable programma naam
+
+gcc -c
+
+
+Norm controle
+Norminette -R CheckForbiddenSourceHeader
